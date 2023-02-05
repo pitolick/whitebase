@@ -3,4 +3,4 @@
 
 # コミット前に実行するコマンド
 npx --no-install lint-staged
-# npm run test
+npm run test
