@@ -1,0 +1,2 @@
+# whitebase
+WordPressのスターターテーマ
