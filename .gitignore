@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/node,composer
-# Edit at https://www.toptal.com/developers/gitignore?templates=node,composer
+# Created by https://www.toptal.com/developers/gitignore/api/node,composer,sass
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,composer,sass
 
 ### Composer ###
 composer.phar
@@ -149,4 +149,10 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
-# End of https://www.toptal.com/developers/gitignore/api/node,composer
+### Sass ###
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# End of https://www.toptal.com/developers/gitignore/api/node,composer,sass

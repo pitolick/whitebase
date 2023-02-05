@@ -46,7 +46,6 @@
 			}
 
 			@for $i from 2 through 5 {
-
 				&.woocommerce-product-gallery--columns-#{$i} {
 
 					.flex-control-thumbs {
@@ -59,7 +58,7 @@
 								margin-right: 0;
 							}
 
-							&:nth-child(#{$i}n+1) {
+							&:nth-child(#{$i}n + 1) {
 								clear: both;
 							}
 						}

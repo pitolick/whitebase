@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# コミット前に実行するコマンド
+npx --no-install lint-staged
+# npm run test

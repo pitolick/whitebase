@@ -43,18 +43,15 @@ ul.products {
 			float: none;
 			width: 100%;
 		}
-
 	}
 
 	@for $i from 2 through 6 {
-
 		ul.products.columns-#{$i} {
 
 			li.product {
 
-				@include column-width( $i );
+				@include column-width($i);
 			}
-
 		}
 	}
 }

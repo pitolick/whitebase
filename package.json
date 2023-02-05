@@ -2,6 +2,7 @@
   "name": "whitebase",
   "version": "1.0.0",
   "description": "WordPress初期構築用のスターターテーマ。Underscoresをベースに作成。",
+  "private": true,
   "author": "ぴいてっく",
   "license": "GPL-2.0-or-later",
   "keywords": [
@@ -17,33 +18,70 @@
     "url": "https://github.com/pitolick/whitebase/issues"
   },
   "devDependencies": {
+    "@secretlint/secretlint-rule-preset-recommend": "^6.2.0",
+    "@types/jest": "^29.4.0",
     "@wordpress/scripts": "^25.3.0",
-    "dir-archiver": "^1.1.1",
-    "node-sass": "^7.0.1",
-    "rtlcss": "^3.5.0"
+    "autoprefixer": "^10.4.12",
+    "browser-sync": "^2.27.5",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "dir-archiver": "^2.0.0",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.33.0",
+    "gsap": "^3.11.3",
+    "husky": "^8.0.3",
+    "jest": "^29.4.1",
+    "jest-environment-jsdom": "^29.4.1",
+    "lint-staged": "^13.1.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.18",
+    "postcss-cli": "^10.0.0",
+    "postcss-import": "^15.0.0",
+    "prettier": "^2.8.3",
+    "reset-css": "^5.0.1",
+    "sass": "^1.55.0",
+    "secretlint": "^6.2.0",
+    "smoothscroll-polyfill": "^0.4.4",
+    "ts-jest": "^29.0.5",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.5",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
   },
-  "rtlcssConfig": {
-    "options": {
-      "autoRename": false,
-      "autoRenameStrict": false,
-      "blacklist": {},
-      "clean": true,
-      "greedy": false,
-      "processUrls": false,
-      "stringMap": []
-    },
-    "plugins": [],
-    "map": false
+  "browserslist": [
+    "defaults"
+  ],
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ],
+    "*.{sass,scss}": [
+      "stylelint --fix"
+    ],
+    "*": [
+      "secretlint"
+    ]
   },
   "scripts": {
-    "watch": "node-sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
-    "compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
-    "compile:rtl": "rtlcss style.css style-rtl.css",
-    "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
-    "lint:js": "wp-scripts lint-js 'js/*.js'",
-    "bundle": "dir-archiver --src . --dest ../_s.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map yarn.lock"
+    "build:css": "sass ./src/scss/:./ --no-source-map --style compressed",
+    "autoprefixer": "postcss --use autoprefixer --no-map ./*.css -d ./",
+    "build:js": "webpack --mode=production",
+    "build": "npm-run-all --parallel build:** --sequential autoprefixer",
+    "watch:css": "sass ./src/scss/:./ --watch --style expanded",
+    "watch:js": "webpack --mode=development --devtool=hidden-source-map --watch",
+    "server": "browser-sync start --config bs-config.js",
+    "dev": "npm-run-all --parallel watch:** --sequential server",
+    "watch": "npm-run-all --parallel watch:**",
+    "prepare": "husky install",
+    "test": "jest",
+    "lint:js": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
+    "lint:style": "stylelint \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore",
+    "lint:prettier": "prettier --check .",
+    "lint:secretlint": "secretlint \"**/*\"",
+    "lint": "npm run lint:js && npm run lint:style && npm run lint:prettier && npm run lint:secretlint",
+    "lintfix": "prettier --write --list-different . && npm run lint:js -- --fix && npm run lint:style -- --fix && npm run lint:secretlint"
   },
   "volta": {
-    "node": "16.19.0"
+    "node": "18.14.0"
   }
 }
