@@ -1,16 +1,16 @@
 {
-	"extends": ["@wordpress/stylelint-config/scss", "stylelint-config-standard", "stylelint-config-prettier", "stylelint-config-standard-scss", "stylelint-config-recess-order"],
-	"ignoreFiles": ["sass/_normalize.scss"],
-	"rules": {
-		"string-quotes": "single",
-		"declaration-colon-newline-after": "always-multi-line",
-		"value-list-comma-newline-after": "never-multi-line",
-		"max-line-length": null,
-		"font-family-no-missing-generic-family-keyword": null,
-		"no-descending-specificity": null,
-		"block-no-empty": null,
-		"no-duplicate-selectors": null,
-		"font-family-no-duplicate-names": null,
-		"selector-class-pattern": null
-	}
+  "extends": ["@wordpress/stylelint-config/scss", "stylelint-config-standard", "stylelint-config-prettier", "stylelint-config-standard-scss", "stylelint-config-recess-order"],
+  "ignoreFiles": ["sass/_normalize.scss"],
+  "rules": {
+    "string-quotes": "single",
+    "declaration-colon-newline-after": "always-multi-line",
+    "value-list-comma-newline-after": "never-multi-line",
+    "max-line-length": null,
+    "font-family-no-missing-generic-family-keyword": null,
+    "no-descending-specificity": null,
+    "block-no-empty": null,
+    "no-duplicate-selectors": null,
+    "font-family-no-duplicate-names": null,
+    "selector-class-pattern": null
+  }
 }

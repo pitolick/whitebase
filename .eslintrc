@@ -1,10 +1,10 @@
 {
-	"extends": ["plugin:@wordpress/eslint-plugin/esnext", "prettier"],
-	"env": {
-		"browser": true,
-		"es2021": true,
-		"node": true,
-		"jest": true
-	},
-	"ignorePatterns": ["style.css"]
+  "extends": ["plugin:@wordpress/eslint-plugin/esnext", "prettier"],
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true,
+    "jest": true
+  },
+  "ignorePatterns": ["style.css"]
 }

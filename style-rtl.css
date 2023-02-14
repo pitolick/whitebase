@@ -70,7 +70,6 @@ html {
   line-height: 1.15;
   text-size-adjust: 100%;
   text-size-adjust: 100%;
-  text-size-adjust: 100%;
 }
 
 /* Sections
@@ -241,7 +240,6 @@ button,
 [type='submit'] {
   appearance: button;
   appearance: button;
-  appearance: button;
 }
 
 /**
@@ -324,7 +322,6 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type='search'] {
-  appearance: textfield;
   appearance: textfield;
   appearance: textfield;
   outline-offset: -2px;
