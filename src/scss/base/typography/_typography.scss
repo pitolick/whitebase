@@ -1,5 +1,5 @@
-@import "headings";
-@import "copy";
+@import 'headings';
+@import 'copy';
 
 body,
 button,
@@ -7,8 +7,8 @@ input,
 select,
 optgroup,
 textarea {
-	color: $color__text-main;
-	font-family: $font__main;
-	font-size: 1rem;
-	line-height: $font__line-height-body;
+  font-family: $font-main;
+  font-size: 1rem;
+  line-height: $font-line-height-body;
+  color: $color-text-main;
 }

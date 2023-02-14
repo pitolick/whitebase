@@ -1,51 +1,51 @@
 p {
-	margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 dfn,
 cite,
 em,
 i {
-	font-style: italic;
+  font-style: italic;
 }
 
 blockquote {
-	margin: 0 1.5em;
+  margin: 0 1.5em;
 }
 
 address {
-	margin: 0 0 1.5em;
+  margin: 0 0 1.5em;
 }
 
 pre {
-	background: $color__background-pre;
-	font-family: $font__pre;
-	line-height: $font__line-height-pre;
-	margin-bottom: 1.6em;
-	max-width: 100%;
-	overflow: auto;
-	padding: 1.6em;
+  max-width: 100%;
+  padding: 1.6em;
+  margin-bottom: 1.6em;
+  overflow: auto;
+  font-family: $font-pre;
+  line-height: $font-line-height-pre;
+  background: $color-background-pre;
 }
 
 code,
 kbd,
 tt,
 var {
-	font-family: $font__code;
+  font-family: $font-code;
 }
 
 abbr,
 acronym {
-	border-bottom: 1px dotted $color__border-abbr;
-	cursor: help;
+  cursor: help;
+  border-bottom: 1px dotted $color-border-abbr;
 }
 
 mark,
 ins {
-	background: $color__background-ins;
-	text-decoration: none;
+  text-decoration: none;
+  background: $color-background-ins;
 }
 
 big {
-	font-size: 125%;
+  font-size: 125%;
 }
