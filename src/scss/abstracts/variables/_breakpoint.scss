@@ -1,0 +1,24 @@
+// 参考：https://hashimotosan.hatenablog.jp/entry/2020/12/06/182327
+// min-width（指定px以上の場合に適用）
+$breakpoint-up: (
+  // Tab最小～
+  'sm': 'screen and (min-width: 520px)',
+  // PC最小～
+  'md': 'screen and (min-width: 960px)',
+  // PC標準～
+  'lg': 'screen and (min-width: 1280px)',
+  // ノートPC FWXGA～,
+  'xl': 'screen and (min-width: 1367px)'
+) !default;
+
+// max-width（指定px以下の場合に適用）
+$breakpoint-down: (
+  // ～SP（ポートレート）最大
+  'sm': 'screen and (max-width: 519px)',
+  // ～Tab（ポートレート）最大
+  'md': 'screen and (max-width: 959px)',
+  // ～Tab（ランドスケープ）最大
+  'lg': 'screen and (max-width: 1279px)',
+  // ～ノートPC FWXGA最大
+  'xl': 'screen and (max-width: 1366px)'
+) !default;
