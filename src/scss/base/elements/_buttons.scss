@@ -5,17 +5,17 @@ input[type='submit'] {
   padding: 0.6em 1em 0.4em;
   line-height: 1;
   color: rgb(0 0 0 / 80%);
-  background: $color-background-button;
+  background: map.get($colors, 'background-button');
   border: 1px solid;
-  border-color: $color-border-button;
+  border-color: map.get($colors, 'border-button');
   border-radius: 3px;
 
   &:hover {
-    border-color: $color-border-button-hover;
+    border-color: map.get($colors, 'border-button-hover');
   }
 
   &:active,
   &:focus {
-    border-color: $color-border-button-focus;
+    border-color: map.get($colors, 'border-button-focus');
   }
 }

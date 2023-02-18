@@ -1,24 +1,27 @@
-$color-background-body: #fff;
-$color-background-screen: #f1f1f1;
-$color-background-hr: #ccc;
-$color-background-button: #e6e6e6;
-$color-background-pre: #eee;
-$color-background-ins: #fff9c0;
-$color-text-screen: #21759b;
-$color-text-input: #666;
-$color-text-input-focus: #111;
+// 単色
+$colors: (
+  background-body: #fff,
+  background-screen: #f1f1f1,
+  background-hr: #ccc,
+  background-button: #e6e6e6,
+  background-pre: #eee,
+  background-ins: #fff9c0,
+  text-screen: #21759b,
+  text-input: #666,
+  text-input-focus: #111,
+  link: #4169e1,
+  link-visited: #800090,
+  link-hover: #191970,
+  text-main: #404040,
+  text-sub: #adadad,
+  border-button: #ccc #ccc #bbb,
+  border-button-hover: #ccc #bbb #aaa,
+  border-button-focus: #aaa #bbb #bbb,
+  border-input: #ccc,
+  border-abbr: #666,
+);
 
-/* royalblue */
-$color-link: #4169e1;
-
-/* purple */
-$color-link-visited: #800090;
-
-/* midnightblue */
-$color-link-hover: #191970;
-$color-text-main: #404040;
-$color-border-button: #ccc #ccc #bbb;
-$color-border-button-hover: #ccc #bbb #aaa;
-$color-border-button-focus: #aaa #bbb #bbb;
-$color-border-input: #ccc;
-$color-border-abbr: #666;
+// グラデーション
+$gradients: (
+  yellow-orange-red: linear-gradient(100deg, map.get($colors, 'yellow') 0%, map.get($colors, 'orange') 60%, map.get($colors, 'red') 100%),
+);

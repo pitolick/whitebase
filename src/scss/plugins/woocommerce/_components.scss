@@ -54,7 +54,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    color: $color-link;
+    color: map.get($colors, 'link');
     content: '\53\53\53\53\53';
   }
 }
@@ -79,7 +79,7 @@ p.stars {
       height: 1em;
       font-family: star;
       line-height: 1;
-      color: $color-text-main;
+      color: map.get($colors, 'text-main');
       text-indent: 0;
       content: '\53';
       opacity: 0.25;
@@ -87,7 +87,7 @@ p.stars {
 
     &:hover {
       ~ a::before {
-        color: $color-text-main;
+        color: map.get($colors, 'text-main');
         content: '\53';
         opacity: 0.25;
       }
@@ -97,7 +97,7 @@ p.stars {
   &:hover {
     a {
       &::before {
-        color: $color-link;
+        color: map.get($colors, 'link');
         content: '\53';
         opacity: 1;
       }
@@ -107,13 +107,13 @@ p.stars {
   &.selected {
     a.active {
       &::before {
-        color: $color-link;
+        color: map.get($colors, 'link');
         content: '\53';
         opacity: 1;
       }
 
       ~ a::before {
-        color: $color-text-main;
+        color: map.get($colors, 'text-main');
         content: '\53';
         opacity: 0.25;
       }
@@ -121,7 +121,7 @@ p.stars {
 
     a:not(.active) {
       &::before {
-        color: $color-link;
+        color: map.get($colors, 'link');
         content: '\53';
         opacity: 1;
       }

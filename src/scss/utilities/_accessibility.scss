@@ -24,9 +24,9 @@
     font-size: 0.875rem;
     font-weight: 700;
     line-height: normal;
-    color: $color-text-screen;
+    color: map.get($colors, 'text-screen');
     text-decoration: none;
-    background-color: $color-background-screen;
+    background-color: map.get($colors, 'background-screen');
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgb(0 0 0 / 60%);
   }

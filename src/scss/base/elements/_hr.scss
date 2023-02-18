@@ -1,6 +1,6 @@
 hr {
   height: 1px;
   margin-bottom: 1.5em;
-  background-color: $color-background-hr;
+  background-color: map.get($colors, 'background-hr');
   border: 0;
 }

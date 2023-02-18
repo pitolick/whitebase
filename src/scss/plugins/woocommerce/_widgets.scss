@@ -28,7 +28,7 @@
     height: 1em;
     margin-top: -0.25em;
     cursor: ew-resize;
-    background: $color-link;
+    background: map.get($colors, 'link');
     outline: none;
     opacity: 1;
 
@@ -46,7 +46,7 @@
     position: absolute;
     z-index: 1;
     display: block;
-    background: $color-link;
+    background: map.get($colors, 'link');
     border: 0;
   }
 

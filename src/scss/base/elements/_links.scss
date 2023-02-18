@@ -1,14 +1,14 @@
 a {
-  color: $color-link;
+  color: map.get($colors, 'link');
 
   &:visited {
-    color: $color-link-visited;
+    color: map.get($colors, 'link-visited');
   }
 
   &:hover,
   &:focus,
   &:active {
-    color: $color-link-hover;
+    color: map.get($colors, 'link-hover');
   }
 
   &:focus {

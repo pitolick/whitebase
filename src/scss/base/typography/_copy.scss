@@ -24,7 +24,7 @@ pre {
   overflow: auto;
   font-family: $font-pre;
   line-height: $font-line-height-pre;
-  background: $color-background-pre;
+  background: map.get($colors, 'background-pre');
 }
 
 code,
@@ -37,13 +37,13 @@ var {
 abbr,
 acronym {
   cursor: help;
-  border-bottom: 1px dotted $color-border-abbr;
+  border-bottom: 1px dotted map.get($colors, 'border-abbr');
 }
 
 mark,
 ins {
   text-decoration: none;
-  background: $color-background-ins;
+  background: map.get($colors, 'background-ins');
 }
 
 big {

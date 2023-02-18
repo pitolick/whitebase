@@ -15,17 +15,17 @@ input[type='datetime-local'],
 input[type='color'],
 textarea {
   padding: 3px;
-  color: $color-text-input;
-  border: 1px solid $color-border-input;
+  color: map.get($colors, 'text-input');
+  border: 1px solid map.get($colors, 'border-input');
   border-radius: 3px;
 
   &:focus {
-    color: $color-text-input-focus;
+    color: map.get($colors, 'text-input-focus');
   }
 }
 
 select {
-  border: 1px solid $color-border-input;
+  border: 1px solid map.get($colors, 'border-input');
 }
 
 textarea {
