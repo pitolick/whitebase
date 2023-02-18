@@ -39,13 +39,13 @@
 @mixin has-colors($colors) {
   @each $key, $value in $colors {
     .has-#{$key}-background-color {
-      background-color: $value;
+      background-color: $value !important;
     }
     .has-#{$key}-color {
-      color: $value;
+      color: $value !important;
     }
     .has-#{$key}-border-color {
-      color: $value;
+      color: $value !important;
     }
   }
 }
@@ -53,7 +53,7 @@
 @mixin has-gradient($gradients) {
   @each $key, $value in $gradients {
     .has-#{$key}-gradient-background {
-      background: $value;
+      background: $value !important;
     }
   }
 }
