@@ -1,0 +1,4 @@
+/* カラーパレット用
+@link https://ja.wordpress.org/team/handbook/block-editor/how-to-guides/themes/theme-support/ */
+@include has-colors($colors);
+@include has-gradient($gradients);

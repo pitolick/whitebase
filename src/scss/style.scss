@@ -67,9 +67,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------- */
 @import 'generic/box-sizing';
 
-/* responsive
+/* Responsive
 --------------------------------------------- */
 @import 'generic/responsive';
+
+/* Container
+--------------------------------------------- */
+@import 'generic/container';
+
+/* Color Palette
+--------------------------------------------- */
+@import 'generic/color-palette';
 
 /* --------------------------------------------------------------
 # Base
