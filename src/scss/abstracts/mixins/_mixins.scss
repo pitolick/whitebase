@@ -45,7 +45,7 @@
       color: $value !important;
     }
     .has-#{$key}-border-color {
-      color: $value !important;
+      border-color: $value !important;
     }
   }
 }
