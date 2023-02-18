@@ -4,7 +4,7 @@ function editor_color_palette() {
 	add_theme_support( 'editor-color-palette', array(
 		array(
 				'name'  => '黒',
-				'slug'  => 'color-text-main',
+				'slug'  => 'text-main',
 				'color' => '#252526',
 		),
 	) );
@@ -20,7 +20,7 @@ function editor_gradient_presets() {
 				array(
 						'name'     => '黄からオレンジからの赤',
 						'gradient' => 'linear-gradient(100deg,#ffe241 0%,#cd7538 60%,#ac3838 100%)',
-						'slug'     => 'gradient-yellow-orange-red'
+						'slug'     => 'yellow-orange-red'
 				),
 		)
 	);
