@@ -73,7 +73,7 @@
     "autoprefixer": "postcss --use autoprefixer --no-map ./*.css -d ./",
     "build:js": "webpack --mode=production",
     "build": "npm-run-all --parallel build:** --sequential autoprefixer",
-    "watch:css": "sass ./src/scss/:./ --watch --style expanded autoprefixer",
+    "watch:css": "sass ./src/scss/:./ --watch --style expanded",
     "watch:js": "webpack --mode=development --devtool=hidden-source-map --watch",
     "server": "browser-sync start --config bs-config.js",
     "dev": "npm-run-all --parallel watch:** --sequential server",
