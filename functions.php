@@ -150,6 +150,21 @@ function whitebase_scripts() {
 add_action( 'wp_enqueue_scripts', 'whitebase_scripts' );
 
 /**
+ * ダッシュボード の投稿ページ用の CSS 読み込み
+ */
+add_action( 'after_setup_theme', function(){
+	add_theme_support( 'wp-block-styles' );
+	add_theme_support( 'editor-styles' );
+	add_editor_style( 'block-editor-style.css' );
+} );
+
+add_action( 'admin_enqueue_scripts', function ( $hook_suffix ) {
+	if ( 'post.php' === $hook_suffix || 'post-new.php' === $hook_suffix || 'widgets.php' === $hook_suffix ) {
+		wp_enqueue_style( 'block-editor-style', get_template_directory_uri() . '/block-editor-style.css' );
+	}
+});
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
