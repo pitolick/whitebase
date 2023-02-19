@@ -1,9 +1,9 @@
 /* レスポンシブ非表示用
 @link https://www.tam-tam.co.jp/tipsnote/html_css/post10708.html */
-@include responsive('.mq-up') {
+@include responsive('.mq-dn-up') {
   display: none;
 }
 
-@include responsive('.mq-dn', $breakpoint-down) {
+@include responsive('.mq-dn-dowm', $breakpoint-down) {
   display: none;
 }
