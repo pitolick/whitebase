@@ -165,6 +165,27 @@ add_action( 'admin_enqueue_scripts', function ( $hook_suffix ) {
 });
 
 /**
+ * body_classにスラッグを追加
+ * @see https://www.nxworld.net/wp-add-page-slug-body-class.html
+ */
+add_filter( 'body_class', 'add_page_slug_class_name' );
+function add_page_slug_class_name( $classes ) {
+  if ( is_page() ) {
+    $page = get_post( get_the_ID() );
+    $classes[] = 'page-slug-'.$page->post_name;
+
+    $parent_id = $page->post_parent;
+    if ( 0 == $parent_id ) {
+      $classes[] = 'page-slug-'.get_post($parent_id)->post_name;
+    } else {
+      $progenitor_id = array_pop( get_ancestors( $page->ID, 'page', 'post_type' ) );
+      $classes[] = 'page-slug-'.get_post($progenitor_id)->post_name . '-child';
+    }
+  }
+  return $classes;
+}
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
