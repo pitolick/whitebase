@@ -16,5 +16,8 @@
   "stylelint.validate": ["css", "scss", "vue"],
   "css.validate": false,
   "scss.validate": false,
-  "vetur.validation.style": false
+  "vetur.validation.style": false,
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  }
 }
