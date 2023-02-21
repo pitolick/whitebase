@@ -47,7 +47,7 @@ table.shop_table_responsive {
   }
 }
 
-@include mq-up(sm) {
+@include mq-up('sm') {
   table.shop_table_responsive {
     thead {
       display: table-header-group;

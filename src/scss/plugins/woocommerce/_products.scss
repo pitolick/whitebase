@@ -17,7 +17,7 @@ ul.products {
   }
 }
 
-@include mq-up(sm) {
+@include mq-up('sm') {
   ul.products {
     li.product {
       @include column-width(3);

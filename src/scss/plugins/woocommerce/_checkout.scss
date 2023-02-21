@@ -1,4 +1,4 @@
-@include mq-up(sm) {
+@include mq-up('sm') {
   .col2-set {
     .form-row-first {
       float: left;
